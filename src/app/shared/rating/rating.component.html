@@ -1,0 +1,8 @@
+<i class="fa"
+  *ngFor="let r of rates"
+  [class.fa-star]="r <= rate"
+  [class.fa-star-o]="r > rate"
+  (click)="setRate(r)"
+  (mouseleave)="clearTemporaryRate(r)"
+  (mouseenter)="setTemporaryRate(r)"
+  ></i>
